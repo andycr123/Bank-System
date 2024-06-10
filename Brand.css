@@ -1,6 +1,15 @@
+:root {
+    --color-principal: #2ca7df;
+    --color-acento: #1a2744;
+    --color-fondo: #f0f8ff;
+    --color-texto: #333;
+    --color-borde: #ccc;
+}
+
+
 body {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 .container {
@@ -8,8 +17,8 @@ body {
     border-radius:.5rem;
     box-shadow: 0 4px 8px rgba(0,0,0,.1);
     padding: 20px;
-    background-color: #444;
-    color: #ddd;
+    background-color: var(--color-texto);
+    color: var(--color-principal);
 }
 
 .container form {
@@ -26,28 +35,28 @@ body {
 .container td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid var(--color-borde);
 }
 
 .container th {
-    background-color: #666;
-    color: #fff;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
 }
 
 .container tbody tr:hover {
-    background-color: #777;
+    background-color: var(--color-principal);
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #0056b3;
+    background-color: var(--color-acento);
+    border-color: var(--color-principal);
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    box-shadow: 0 0 10px rgba(0,123,255,.5);
+    box-shadow: 0 0 10px rgba(64,224,208,.5); /* Ajustado al color acento */
 }
 
 .form-control {
@@ -56,8 +65,8 @@ body {
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(64,224,208,.25); /* Ajustado al color acento */
+    border-color: var(--color-principal);
 }
 
 .table tbody tr {
@@ -65,7 +74,7 @@ body {
 }
 
 .table tbody tr:hover {
-    background-color: #0069d9;
+    background-color: var(--color-acento);
     cursor: pointer;
 }
 
