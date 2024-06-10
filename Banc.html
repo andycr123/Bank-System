@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shorcut icon" href="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shorcut icon" href="./img/" />
     <title>Bank</title>
-    <link rel="stylesheet" href="">
-</head>
-<body>
-    
-</body>
-<script src="./Operation.js"></script>
+    <link rel="stylesheet" href="./Brand.css" />
+  </head>
+  <body>
+    <!--Inicio de contenedores de proyecto version 1.0-->
+    <!--Inicio de contenedor Principal-->
+    <div class="container">
+      <!---->
+      <div>
+        <!--Contenedor de contraseña-->
+        <label for="clave">Clave</label>
+        <input type="text" name="clave" id="clave" />
+      </div>
+
+      <div>
+        <!--Contenedor de valor/monto ingresado-->
+        <label for="valor">Valor</label>
+        <input type="number" name="valor" id="valor" />
+      </div>
+
+      <div>
+        <!--Seccion de botones de usuario-->
+        <button id="añadir">Añadir</button>
+        <button id="eliminar">Eliminar</button>
+        <button id="limpiar">Limpiar</button>
+      </div>
+
+
+      <div id="montoIngresado" class="container">
+        <!--Seccion de monto ingresado-->
+        <h2>Monto Ingresado:</h2>
+        <ul id="listaMonto"></ul>
+      <!---->
+    </div>
+    <!--Fin de contenedor Principal-->
+  </body>
+  <script src="./Operation.js"></script>
 </html>
