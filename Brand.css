@@ -1,0 +1,138 @@
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    margin: 20px auto;
+    border-radius:.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    padding: 20px;
+    background-color: #444;
+    color: #ddd;
+}
+
+.container form {
+    max-width: 90%;
+    margin: auto;
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container th,
+.container td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+.container th {
+    background-color: #666;
+    color: #fff;
+}
+
+.container tbody tr:hover {
+    background-color: #777;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #0056b3;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    box-shadow: 0 0 10px rgba(0,123,255,.5);
+}
+
+.form-control {
+    border-radius:.25rem;
+    transition: border-color.15s ease-in-out, box-shadow.15s ease-in-out;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: #0056b3;
+}
+
+.table tbody tr {
+    transition: background-color.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #0069d9;
+    cursor: pointer;
+}
+
+#btnUpdate {
+    display: none;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media query para dispositivos pequeños (móviles) */
+@media (max-width: 576px) {
+   .container {
+        padding: 10px;
+    }
+
+   .container form {
+        max-width: 100%;
+    }
+
+   .btn-primary {
+        font-size:.875rem; /* Reduce el tamaño del texto de los botones */
+    }
+
+   .form-control {
+        font-size:.875rem; /* Reduce el tamaño del texto de los inputs */
+    }
+}
+
+/* Media query para tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+   .container {
+        padding: 15px;
+    }
+
+   .btn-primary {
+        font-size: 1rem; /* Tamaño de texto normal para tablets */
+    }
+
+   .form-control {
+        font-size: 1rem; /* Tamaño de texto normal para tablets */
+    }
+}
+
+/* Media query para laptops y desktops */
+@media (min-width: 769px) {
+   .container {
+        padding: 20px;
+    }
+
+   .btn-primary {
+        font-size: 1.125rem; /* Tamaño de texto ligeramente mayor para pantallas grandes */
+    }
+
+   .form-control {
+        font-size: 1.125rem; /* Tamaño de texto ligeramente mayor para pantallas grandes */
+    }
+}
