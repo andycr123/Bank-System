@@ -1,11 +1,10 @@
 :root {
-    --color-principal: #2ca7df;
-    --color-acento: #1a2744;
+    --color-principal: #39b0e7;
+    --color-acento: rgba(22, 161, 147, 0.527);
     --color-fondo: #f0f8ff;
-    --color-texto: #333;
+    --color-texto: #233253;
     --color-borde: #ccc;
 }
-
 
 body {
     background-color: var(--color-fondo);
@@ -17,7 +16,7 @@ body {
     border-radius:.5rem;
     box-shadow: 0 4px 8px rgba(0,0,0,.1);
     padding: 20px;
-    background-color: var(--color-texto);
+    background-color: var(--color-texto); /* Ajustado a un blanco más puro */
     color: var(--color-principal);
 }
 
@@ -43,8 +42,13 @@ body {
     color: var(--color-texto);
 }
 
+.container tbody tr {
+    background-color: var(--color-texto); /* Ajustado a un blanco más claro */
+    transition: background-color.3s ease;
+}
+
 .container tbody tr:hover {
-    background-color: var(--color-principal);
+    background-color: var(--color-acento); /* Mantén el mismo nivel de claridad en hover */
     cursor: pointer;
 }
 
@@ -56,7 +60,7 @@ body {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    box-shadow: 0 0 10px rgba(64,224,208,.5); /* Ajustado al color acento */
+    box-shadow: 0 0 10px rgba(64,224,208,.5);
 }
 
 .form-control {
@@ -65,12 +69,8 @@ body {
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(64,224,208,.25); /* Ajustado al color acento */
+    box-shadow: 0 0 0 0.2rem rgba(64,224,208,.25);
     border-color: var(--color-principal);
-}
-
-.table tbody tr {
-    transition: background-color.3s ease;
 }
 
 .table tbody tr:hover {
@@ -97,51 +97,48 @@ body {
     }
 }
 
-/* Media query para dispositivos pequeños (móviles) */
 @media (max-width: 576px) {
-   .container {
+ .container {
         padding: 10px;
     }
 
-   .container form {
+ .container form {
         max-width: 100%;
     }
 
-   .btn-primary {
-        font-size:.875rem; /* Reduce el tamaño del texto de los botones */
+ .btn-primary {
+        font-size:.875rem;
     }
 
-   .form-control {
-        font-size:.875rem; /* Reduce el tamaño del texto de los inputs */
+ .form-control {
+        font-size:.875rem;
     }
 }
 
-/* Media query para tablets */
 @media (min-width: 577px) and (max-width: 768px) {
-   .container {
+ .container {
         padding: 15px;
     }
 
-   .btn-primary {
-        font-size: 1rem; /* Tamaño de texto normal para tablets */
+ .btn-primary {
+        font-size: 1rem;
     }
 
-   .form-control {
-        font-size: 1rem; /* Tamaño de texto normal para tablets */
+ .form-control {
+        font-size: 1rem;
     }
 }
 
-/* Media query para laptops y desktops */
 @media (min-width: 769px) {
-   .container {
+ .container {
         padding: 20px;
     }
 
-   .btn-primary {
-        font-size: 1.125rem; /* Tamaño de texto ligeramente mayor para pantallas grandes */
+ .btn-primary {
+        font-size: 1.125rem;
     }
 
-   .form-control {
-        font-size: 1.125rem; /* Tamaño de texto ligeramente mayor para pantallas grandes */
+ .form-control {
+        font-size: 1.125rem;
     }
 }
